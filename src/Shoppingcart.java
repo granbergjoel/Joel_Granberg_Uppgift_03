@@ -13,7 +13,7 @@ public class Shoppingcart {
             int basket[]=new int[lenght];
             return basket;
     }
-    //TODO metod som lägger till äpplen i basket
+
     public static int[] addApples(int[] addingApples, int apples, int price){
         for (int i = 0; i <apples ; i++) {
             addingApples[i]=price;
@@ -21,13 +21,22 @@ public class Shoppingcart {
 
         return addingApples;}
 
-    //TODO metod som lägger till päron i basket
+
     public static int[] addPears(int[] addingPears,int startIndex, int pears, int price){
-        for (int i = 0; i <pears ; i++) {
+        for (int i = startIndex; i <(startIndex+pears) ; i++) {
             addingPears[i]=price;
         }
 
         return addingPears;}
-    //metod som räknar ut innehållet i korgen
+
+
+    public static int finalSum(int[]cart, int lenght){
+        int sum=0;
+        for (int i = 0; i < lenght; i++) {
+            sum=sum+cart[i];
+        }
+
+        return sum;
+    }
 
 }
