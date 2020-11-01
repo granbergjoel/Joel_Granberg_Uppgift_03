@@ -8,6 +8,4 @@
 public class Pear {
     int amount;
     int priceOfPears;
-
-
 }

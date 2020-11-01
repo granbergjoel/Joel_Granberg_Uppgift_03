@@ -8,7 +8,11 @@
 public class Shoppingcart {
 
 
-
+    /**
+     *
+     * @param lenght
+     * @return
+     */
     public static int[] basket(int lenght){
             int basket[]=new int[lenght];
             return basket;
@@ -21,14 +25,12 @@ public class Shoppingcart {
 
         return addingApples;}
 
-
     public static int[] addPears(int[] addingPears,int startIndex, int pears, int price){
         for (int i = startIndex; i <(startIndex+pears) ; i++) {
             addingPears[i]=price;
         }
 
         return addingPears;}
-
 
     public static int finalSum(int[]cart, int lenght){
         int sum=0;

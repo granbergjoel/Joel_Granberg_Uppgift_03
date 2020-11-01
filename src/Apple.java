@@ -8,6 +8,4 @@
 public class Apple {
     int amount;
     int priceOfApples;
-
-
 }
