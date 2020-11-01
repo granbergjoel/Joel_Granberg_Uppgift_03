@@ -14,10 +14,17 @@ public class Main {
         Pear pear = new Pear();
         int answer;
 
+        /**
+         * Programmet hålls igång av en loop som stängs i slutet om användaren vill
+         */
         while (true) {
             System.out.println("--- Välkommen till Farmen Äpplen och Päron ---");
-            System.out.println("Priset på äpplen beror på dagsformen"); //TODO string.format med klassanrop?
+            System.out.println("Priset på äpplen beror på dagsformen");
 
+            /**
+             * Första segmentet samlar in data om mängd och pris samt initerar klasserna Apple och Pear med dessa.
+             * Try/catch används för att användaren inte ska skriva in felaktig data.
+             */
             System.out.println("Hur många äpplen ska du sälja: ");
             while (true) {
                 try {
@@ -68,6 +75,12 @@ public class Main {
                 }
             }
 
+            /**
+             * Andra segmentet kör alla metoder
+             * Skapar en varukorg (cart)
+             * Fyller den med Apple och sedan med Pear
+             * Räknar ut värdet av alla produkter i varukorgen och ger användaren resultatet
+             */
             int lengthOfArray = apple.amount + pear.amount;
 
             int[] cart = Shoppingcart.basket(lengthOfArray);
@@ -85,6 +98,10 @@ public class Main {
                     "\nPriset för päron är %d kr." +
                     "\nTotala summan blir %d kr", apple.amount, pear.amount, apple.priceOfApples, pear.priceOfPears, cartTotal);
 
+            /**
+             * I tredje segmentet får användaren välja att avsluta eller fortsätta
+             * Detta görs med en switch som antingen börjar om loopen eller bryter programmet
+             */
             while (true) {
                 try {
                     System.out.println("\nSkriv '1' för att handla igen eller '2' för att avsluta.");
