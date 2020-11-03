@@ -5,6 +5,11 @@
  * Project: IntelliJ IDEA
  * Copyright: MIT
  */
+
+
+/**
+ * Klassen ShoppingCart är till för att hantera varukorgen(cart) i main
+ */
 public class Shoppingcart {
 
 
@@ -12,7 +17,7 @@ public class Shoppingcart {
      * @param lenght = mängden äpplen + päron
      * @return shoppingvagn i form av en array
      */
-    static double[] basket(int lenght) {
+   public static double[] basket(int lenght) {
         double[] basket = new double[lenght];
         return basket;
     }
@@ -20,7 +25,7 @@ public class Shoppingcart {
     /**
      * @param addingApples tar in shoppingvagnen cart
      * @param apples       =mängden äpplen
-     * @param price        lagras i varukorgen
+     * @param price        priset på äpplen, lagras i varukorgen
      * @return cart är nu laddad med alla äpplen
      */
     public static double[] addApples(double[] addingApples, int apples, double price) {
@@ -35,7 +40,7 @@ public class Shoppingcart {
      * @param addingPears tar åter in shoppingvagnen cart
      * @param startIndex  = mängden äpplen +1 för att inte skriva över några äpplen i korgen
      * @param pears       = mängden päron
-     * @param price       lagras i varukorgen
+     * @param price       priset på päron lagras i varukorgen
      * @return cart är nu ladda med BÅDE äpplen och päron
      */
     public static double[] addPears(double[] addingPears, int startIndex, int pears, double price) {
