@@ -14,7 +14,7 @@ public class Shoppingcart {
      * @return shoppingvagn i form av en array
      */
     public static int[] basket(int lenght){
-            int basket[]=new int[lenght];
+            int[] basket =new int[lenght];
             return basket;
     }
 
@@ -36,7 +36,7 @@ public class Shoppingcart {
      *
      * @param addingPears tar åter in shoppingvagnen cart
      * @param startIndex = mängden äpplen +1 för att inte skriva över några äpplen i korgen
-     * @param pears = mängden pärin
+     * @param pears = mängden päron
      * @param price lagras i varukorgen
      * @return cart är nu ladda med BÅDE äpplen och päron
      */

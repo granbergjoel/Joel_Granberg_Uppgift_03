@@ -12,6 +12,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         Apple apple = new Apple();
         Pear pear = new Pear();
+        int amountOfApples;
         int answer;
 
         /**
@@ -19,16 +20,16 @@ public class Main {
          */
         while (true) {
             System.out.println("--- Välkommen till Farmen Äpplen och Päron ---");
-            System.out.println("Priset på äpplen beror på dagsformen");
+            System.out.println("Priset på äpplen beror på dagsformen");//TODO ändra till statiska värden i klassen
 
             /**
              * Första segmentet samlar in data om mängd och pris samt initerar klasserna Apple och Pear med dessa.
              * Try/catch används för att användaren inte ska skriva in felaktig data.
              */
-            System.out.println("Hur många äpplen ska du sälja: ");
+            System.out.println("Hur många äpplen ska du sälja: ");//TODO metodanrop till Apple, return amount
             while (true) {
                 try {
-                    apple.amount = scan.nextInt();
+                    answer=scan.nextInt();
                     break;
                 } catch (Exception e) {
                     scan.next();
@@ -36,7 +37,9 @@ public class Main {
                     System.out.println("Hur många äpplen ska du sälja: ");
                 }
             }
-            System.out.println("Vad kostar äpplen idag: ");
+            apple.howManyApples(answer);
+            amountOfApples=apple.getApple();//TODO använda denna i uträkning nedan
+           /* System.out.println("Vad kostar äpplen idag: ");//TODO ta bort dessa rader
 
             while (true) {
                 try {
@@ -47,9 +50,9 @@ public class Main {
                     System.out.println("Något blev fel, du får bara skriva heltal. Försök igen:");
                     System.out.println("Vad kostar äpplen idag: ");
                 }
-            }
+            }*/
 
-            System.out.println("Hur många päron ska du sälja: ");
+            System.out.println("Hur många päron ska du sälja: ");//TODO anropa Pear, return amount
 
             while (true) {
                 try {
@@ -62,7 +65,7 @@ public class Main {
                 }
             }
 
-            System.out.println("Vad kostar päron idag: ");
+            System.out.println("Vad kostar päron idag: ");//TODO ta bort
 
             while (true) {
                 try {
@@ -81,7 +84,7 @@ public class Main {
              * Fyller den med Apple och sedan med Pear
              * Räknar ut värdet av alla produkter i varukorgen och ger användaren resultatet
              */
-            int lengthOfArray = apple.amount + pear.amount;
+          /*  int lengthOfArray = apple.amount + pear.amount;
 
             int[] cart = Shoppingcart.basket(lengthOfArray);
 
@@ -97,6 +100,8 @@ public class Main {
                     "\nPriset för äpplen är %d kr." +
                     "\nPriset för päron är %d kr." +
                     "\nTotala summan blir %d kr", apple.amount, pear.amount, apple.priceOfApples, pear.priceOfPears, cartTotal);
+                    */
+
 
             /**
              * I tredje segmentet får användaren välja att avsluta eller fortsätta
