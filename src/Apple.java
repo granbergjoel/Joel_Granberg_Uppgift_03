@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.util.*;
+import java.lang.*;
 
 /**
  * Created by: Joel
@@ -9,22 +10,34 @@ import java.util.Scanner;
  */
 public class Apple {
     private int amount;
-    private int priceOfApples= 5;
+    private static final double PRICEOFAPPLES= 4.90;
     Scanner scan = new Scanner(System.in);
-                //TODO metodanrop till Apple, return amount
 
-    public void howManyApples(int apples){
-        amount=apples;
+    /**
+     * Metoder som tar emot data från användaren, initierar instansvariabler och returnerar dessa.
+     * Try/catch används för att användaren inte ska skriva in felaktig data.
+     */
+    public void howManyApples(){
+
+        while (true) {
+            try {
+
+                amount=scan.nextInt();
+                break;
+            } catch (Exception e) {
+                scan.next();
+                System.out.println("Något blev fel, du får bara skriva heltal. Försök igen.");
+                System.out.println("Hur många äpplen ska du sälja: ");
+            }
+        }
+
     }
-    public int getApple(){
-        return amount;
+    public int getApple() {
+                return amount;
     }
-
-
-
-
-
-
-
-
+    public double getPriceOfApples(){
+        return PRICEOFAPPLES;
+    }
 }
+
+

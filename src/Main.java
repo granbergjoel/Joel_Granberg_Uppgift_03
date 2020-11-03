@@ -13,6 +13,9 @@ public class Main {
         Apple apple = new Apple();
         Pear pear = new Pear();
         int amountOfApples;
+        double appleCost;
+        int amountOfPears;
+        double pearCost;
         int answer;
 
         /**
@@ -23,60 +26,18 @@ public class Main {
             System.out.println("Priset på äpplen beror på dagsformen");//TODO ändra till statiska värden i klassen
 
             /**
-             * Första segmentet samlar in data om mängd och pris samt initerar klasserna Apple och Pear med dessa.
-             * Try/catch används för att användaren inte ska skriva in felaktig data.
+             * Första segmentet samlar in data om mängd sålda produkter.
+             * Metodanrop används då klassernas variabler är statiska
              */
-            System.out.println("Hur många äpplen ska du sälja: ");//TODO metodanrop till Apple, return amount
-            while (true) {
-                try {
-                    answer=scan.nextInt();
-                    break;
-                } catch (Exception e) {
-                    scan.next();
-                    System.out.println("Något blev fel, du får bara skriva heltal. Försök igen.");
-                    System.out.println("Hur många äpplen ska du sälja: ");
-                }
-            }
-            apple.howManyApples(answer);
-            amountOfApples=apple.getApple();//TODO använda denna i uträkning nedan
-           /* System.out.println("Vad kostar äpplen idag: ");//TODO ta bort dessa rader
+            System.out.println("Hur många äpplen ska du sälja: ");
+            apple.howManyApples();
+            amountOfApples = apple.getApple();
+            appleCost = apple.getPriceOfApples();
 
-            while (true) {
-                try {
-                    apple.priceOfApples = scan.nextInt();
-                    break;
-                } catch (Exception e) {
-                    scan.next();
-                    System.out.println("Något blev fel, du får bara skriva heltal. Försök igen:");
-                    System.out.println("Vad kostar äpplen idag: ");
-                }
-            }*/
-
-            System.out.println("Hur många päron ska du sälja: ");//TODO anropa Pear, return amount
-
-            while (true) {
-                try {
-                    pear.amount = scan.nextInt();
-                    break;
-                } catch (Exception e) {
-                    scan.next();
-                    System.out.println("Något blev fel, du får bara skriva heltal. Försök igen:");
-                    System.out.println("Hur många päron ska du sälja");
-                }
-            }
-
-            System.out.println("Vad kostar päron idag: ");//TODO ta bort
-
-            while (true) {
-                try {
-                    pear.priceOfPears = scan.nextInt();
-                    break;
-                } catch (Exception e) {
-                    scan.next();
-                    System.out.println("Något blev fel, du får bara skriva heltal. Försök igen:");
-                    System.out.println("Vad kostar päron idag:");
-                }
-            }
+            System.out.println("Hur många päron ska du sälja: ");
+            pear.howManyPears();
+            amountOfPears = pear.getPear();
+            pearCost = pear.getPriceOfPears();
 
             /**
              * Andra segmentet kör alla metoder
@@ -84,24 +45,23 @@ public class Main {
              * Fyller den med Apple och sedan med Pear
              * Räknar ut värdet av alla produkter i varukorgen och ger användaren resultatet
              */
-          /*  int lengthOfArray = apple.amount + pear.amount;
+            int lengthOfArray = amountOfApples + amountOfPears;
 
-            int[] cart = Shoppingcart.basket(lengthOfArray);
+            double[] cart = Shoppingcart.basket(lengthOfArray);
 
-            Shoppingcart.addApples(cart, apple.amount, apple.priceOfApples);
+            Shoppingcart.addApples(cart, amountOfApples, appleCost);
 
-            Shoppingcart.addPears(cart, apple.amount, pear.amount, pear.priceOfPears);
+            Shoppingcart.addPears(cart, amountOfApples, amountOfPears, pearCost);
 
-            int cartTotal = Shoppingcart.finalSum(cart, cart.length);
+            double cartTotal = Shoppingcart.finalSum(cart, cart.length);
 
             System.out.println(cartTotal);
 
             System.out.format("Du har sålt %dst äpplen och %dst päron." +
-                    "\nPriset för äpplen är %d kr." +
-                    "\nPriset för päron är %d kr." +
-                    "\nTotala summan blir %d kr", apple.amount, pear.amount, apple.priceOfApples, pear.priceOfPears, cartTotal);
-                    */
-
+                            "\nPriset för äpplen är %.2f kr." +
+                            "\nPriset för päron är %.2f kr." +
+                            "\nTotala summan blir %.2f kr", amountOfApples, amountOfPears, appleCost,
+                    pearCost, cartTotal);
 
             /**
              * I tredje segmentet får användaren välja att avsluta eller fortsätta
