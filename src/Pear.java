@@ -15,9 +15,13 @@ public class Pear {
     private final double PRICEOFPEARS = 5.90;
     Scanner scan = new Scanner(System.in);
 
-    /**
-     * Metoder som tar emot data från användaren, initierar instansvariabler och returnerar dessa.
+    /*
+     * Klassen innehåller Metoder som tar emot data från användaren, initierar instansvariabler och returnerar dessa.
      * Try/catch används för att användaren inte ska skriva in felaktig data.
+     */
+
+    /**
+     * Sätter antalet päron i klassen
      */
     public void howManyPears() {
         while (true) {
@@ -32,10 +36,16 @@ public class Pear {
         }
     }
 
+    /**
+     * @return skickar antalet päron till main
+     */
     public int getPear() {
         return amount;
     }
 
+    /**
+     * @return skickar pris på päron till main
+     */
     public double getPriceOfPears() {
         return PRICEOFPEARS;
     }

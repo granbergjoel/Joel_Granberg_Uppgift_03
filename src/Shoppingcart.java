@@ -1,4 +1,3 @@
-
 /**
  * Created by: Joel
  * Date: 2020-10-30
@@ -6,12 +5,10 @@
  * Project: IntelliJ IDEA
  * Copyright: MIT
  */
-
-/**
+public class Shoppingcart {
+/*
  * Klassen ShoppingCart är till för att hantera varukorgen(cart) i main
  */
-public class Shoppingcart {
-
 
     /**
      * @param lenght = mängden äpplen + päron
@@ -54,7 +51,6 @@ public class Shoppingcart {
         for (int i = 0; i < lenght; i++) {
             sum = sum + cart[i];
         }
-
         return sum;
     }
 

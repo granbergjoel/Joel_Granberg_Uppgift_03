@@ -13,9 +13,13 @@ public class Apple {
     private final double PRICEOFAPPLES= 4.90;
     Scanner scan = new Scanner(System.in);
 
-    /**
-     * Metoder som tar emot data från användaren, initierar instansvariabler och returnerar dessa.
+    /*
+     * Klassen innehåller Metoder som tar emot data från användaren, initierar instansvariabler och returnerar dessa.
      * Try/catch används för att användaren inte ska skriva in felaktig data.
+     */
+
+    /**
+     * Avänds för att bestämma antal äpplen inne i klassen
      */
     public void howManyApples(){
 
@@ -32,9 +36,16 @@ public class Apple {
         }
 
     }
+
+    /**
+     * @return skickar antalet äppen till main
+     */
     public int getApple() {
                 return amount;
     }
+    /**
+     * @return skickar priset på äppen till main
+     */
     public double getPriceOfApples(){
         return PRICEOFAPPLES;
     }

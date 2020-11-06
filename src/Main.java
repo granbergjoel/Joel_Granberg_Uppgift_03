@@ -40,14 +40,12 @@ public class Main {
             pearCost = pear.getPriceOfPears();
 
             /*
-              Andra segmentet kör alla metoder
+              Andra segmentet kör alla metoder i klassen Shoppingcart
               Skapar en varukorg (cart)
               Fyller den med Apple och sedan med Pear
               Räknar ut värdet av alla produkter i varukorgen och ger användaren resultatet
              */
-            int lengthOfArray = amountOfApples + amountOfPears;
-
-            double[] cart = Shoppingcart.basket(lengthOfArray);
+            double[] cart = Shoppingcart.basket(amountOfApples + amountOfPears);
 
             Shoppingcart.addApples(cart, amountOfApples, appleCost);
 
