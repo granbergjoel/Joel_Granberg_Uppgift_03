@@ -23,7 +23,7 @@ public class Main {
          */
         while (true) {
             System.out.println("--- Välkommen till Farmen Äpplen och Päron ---");
-            System.out.println("Priset på äpplen beror på dagsformen");//TODO ändra till statiska värden i klassen
+            System.out.println("Priset på äpplen beror på dagsformen");
 
             /*
               Första segmentet samlar in data om mängd sålda produkter.
@@ -54,8 +54,6 @@ public class Main {
             Shoppingcart.addPears(cart, amountOfApples, amountOfPears, pearCost);
 
             double cartTotal = Shoppingcart.finalSum(cart, cart.length);
-
-            System.out.println(cartTotal);
 
             System.out.format("Du har sålt %dst äpplen och %dst päron." +
                             "\nPriset för äpplen är %.2f kr." +
