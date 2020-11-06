@@ -18,16 +18,16 @@ public class Main {
         double pearCost;
         int answer;
 
-        /**
-         * Programmet hålls igång av en loop som stängs i slutet om användaren vill
+        /*
+          Programmet hålls igång av en loop som stängs i slutet om användaren vill
          */
         while (true) {
             System.out.println("--- Välkommen till Farmen Äpplen och Päron ---");
             System.out.println("Priset på äpplen beror på dagsformen");//TODO ändra till statiska värden i klassen
 
-            /**
-             * Första segmentet samlar in data om mängd sålda produkter.
-             * Metodanrop används då klassernas variabler är statiska
+            /*
+              Första segmentet samlar in data om mängd sålda produkter.
+              Metodanrop används då klassernas variabler är statiska
              */
             System.out.println("Hur många äpplen ska du sälja: ");
             apple.howManyApples();
@@ -39,11 +39,11 @@ public class Main {
             amountOfPears = pear.getPear();
             pearCost = pear.getPriceOfPears();
 
-            /**
-             * Andra segmentet kör alla metoder
-             * Skapar en varukorg (cart)
-             * Fyller den med Apple och sedan med Pear
-             * Räknar ut värdet av alla produkter i varukorgen och ger användaren resultatet
+            /*
+              Andra segmentet kör alla metoder
+              Skapar en varukorg (cart)
+              Fyller den med Apple och sedan med Pear
+              Räknar ut värdet av alla produkter i varukorgen och ger användaren resultatet
              */
             int lengthOfArray = amountOfApples + amountOfPears;
 
@@ -63,9 +63,9 @@ public class Main {
                             "\nTotala summan blir %.2f kr", amountOfApples, amountOfPears, appleCost,
                     pearCost, cartTotal);
 
-            /**
-             * I tredje segmentet får användaren välja att avsluta eller fortsätta
-             * Detta görs med en switch som antingen börjar om loopen eller bryter programmet
+            /*
+              I tredje segmentet får användaren välja att avsluta eller fortsätta
+              Detta görs med en switch som antingen börjar om loopen eller bryter programmet
              */
             while (true) {
                 try {

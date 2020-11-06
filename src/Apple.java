@@ -10,7 +10,7 @@ import java.lang.*;
  */
 public class Apple {
     private int amount;
-    private static final double PRICEOFAPPLES= 4.90;
+    private final double PRICEOFAPPLES= 4.90;
     Scanner scan = new Scanner(System.in);
 
     /**

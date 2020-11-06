@@ -12,7 +12,7 @@ import java.lang.*;
 
 public class Pear {
     private int amount;
-    private static final double PRICEOFPEARS = 5.90;
+    private final double PRICEOFPEARS = 5.90;
     Scanner scan = new Scanner(System.in);
 
     /**
