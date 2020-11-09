@@ -23,7 +23,7 @@ public class Pear {
     /**
      * Sätter antalet päron i klassen
      */
-    public void howManyPears() {
+    public void setAmount() {
         while (true) {
             try {
                 amount = scan.nextInt();
@@ -46,7 +46,7 @@ public class Pear {
     /**
      * @return skickar pris på päron till main
      */
-    public double getPriceOfPears() {
+    public double getPRICEOFPEARS() {
         return PRICEOFPEARS;
     }
 }

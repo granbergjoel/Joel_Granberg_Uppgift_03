@@ -21,11 +21,10 @@ public class Apple {
     /**
      * Avänds för att bestämma antal äpplen inne i klassen
      */
-    public void howManyApples(){
+    public void setAmount(){
 
         while (true) {
             try {
-
                 amount=scan.nextInt();
                 break;
             } catch (Exception e) {
@@ -46,7 +45,7 @@ public class Apple {
     /**
      * @return skickar priset på äppen till main
      */
-    public double getPriceOfApples(){
+    public double getPRICEOFAPPLES(){
         return PRICEOFAPPLES;
     }
 }

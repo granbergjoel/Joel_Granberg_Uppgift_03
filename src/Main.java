@@ -30,34 +30,23 @@ public class Main {
               Metodanrop används då klassernas variabler är statiska
              */
             System.out.println("Hur många äpplen ska du sälja: ");
-            apple.howManyApples();
+            apple.setAmount();
             amountOfApples = apple.getApple();
-            appleCost = apple.getPriceOfApples();
+            appleCost = apple.getPRICEOFAPPLES();
 
             System.out.println("Hur många päron ska du sälja: ");
-            pear.howManyPears();
+            pear.setAmount();
             amountOfPears = pear.getPear();
-            pearCost = pear.getPriceOfPears();
+            pearCost = pear.getPRICEOFPEARS();
 
             /*
-              Andra segmentet kör alla metoder i klassen Shoppingcart
-              Skapar en varukorg (cart)
-              Fyller den med Apple och sedan med Pear
-              Räknar ut värdet av alla produkter i varukorgen och ger användaren resultatet
+              Andra segmentet räknar ut värdet av alla produkter i som säljs och ger användaren resultatet
              */
-            double[] cart = Shoppingcart.basket(amountOfApples + amountOfPears);
-
-            Shoppingcart.addApples(cart, amountOfApples, appleCost);
-
-            Shoppingcart.addPears(cart, amountOfApples, amountOfPears, pearCost);
-
-            double cartTotal = Shoppingcart.finalSum(cart, cart.length);
-
             System.out.format("Du har sålt %dst äpplen och %dst päron." +
                             "\nPriset för äpplen är %.2f kr." +
                             "\nPriset för päron är %.2f kr." +
-                            "\nTotala summan blir %.2f kr", amountOfApples, amountOfPears, appleCost,
-                    pearCost, cartTotal);
+                            "\nTotala summan blir %.2f kr", apple.getApple(), pear.getPear(), apple.getPRICEOFAPPLES(),
+                    pear.getPRICEOFPEARS(),(apple.getApple()*apple.getPRICEOFAPPLES()+(pear.getPear()*pear.getPRICEOFPEARS())));
 
             /*
               I tredje segmentet får användaren välja att avsluta eller fortsätta
