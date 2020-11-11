@@ -24,6 +24,7 @@ public class Main {
         while (true) {
             System.out.println("--- Välkommen till Farmen Äpplen och Päron ---");
             System.out.println("Priset på äpplen beror på dagsformen");
+            System.out.println("Du kan när som helst avsluta programmet med Ctrl-D (EOF)");
 
             /*
               Första segmentet samlar in data om mängd sålda produkter.
